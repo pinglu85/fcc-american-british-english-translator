@@ -7,7 +7,7 @@ export default function injectHtml(str, replacements) {
       const end = start + replacement.length;
       const replace = `<span class="highlight">${replacement}</span>`;
       str = str.slice(0, start) + replace + str.slice(end);
-      start = str.indexOf(replacement, end + 33);
+      start = str.indexOf(replacement, end + 31);
     }
   }
   return str;

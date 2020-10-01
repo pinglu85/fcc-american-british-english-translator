@@ -40,8 +40,9 @@ export default function replacePhrases(
     replacements.push(newPhrase);
 
     // Search the target phrase in the rest of string
+    const newEnd = startIndexInStr + newPhrase.length;
     lowerCased = str.toLowerCase();
-    startIndexInStr = lowerCased.indexOf(target);
+    startIndexInStr = lowerCased.indexOf(target, newEnd);
   }
   return [isTranslated, str];
 }
